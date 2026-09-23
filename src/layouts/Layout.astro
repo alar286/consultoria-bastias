@@ -1,0 +1,102 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import WhatsappFloat from '../components/WhatsappFloat.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  customStyle?: string;
+}
+
+const {
+  title = 'Coach ontológico organizacional | Claridad en tu Liderazgo',
+  description = 'Transforma tu liderazgo con claridad. Ayudo a organizaciones a soltar lo obsoleto y recuperar dirección mediante escucha profunda y cambios precisos.',
+  ogImage = '/images/og-image.jpg',
+  customStyle,
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content={description} />
+  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:site_name" content="Consultoría Bastías" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link rel="canonical" href={Astro.url} />
+
+  <title>{title}</title>
+
+  {customStyle && <style set:html={customStyle} />}
+
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KNJHW2RP');
+  </script>
+</head>
+<body>
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KNJHW2RP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
+  <Navbar />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+  <WhatsappFloat />
+
+  <script>
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', () => {
+      navbar?.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    hamburger?.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu?.classList.toggle('open');
+      document.body.style.overflow = mobileMenu?.classList.contains('open') ? 'hidden' : '';
+    });
+
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger?.classList.remove('open');
+        mobileMenu?.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

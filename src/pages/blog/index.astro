@@ -1,0 +1,89 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime());
+
+const categories = ['Todas', 'Comunicación', 'Liderazgo', 'Procesos'];
+
+function formatDate(date: Date) {
+  return new Intl.DateTimeFormat('es-MX', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }).format(new Date(date));
+}
+---
+
+<Layout
+  title="Blog - Transformación Organizacional: Artículos y Perspectivas"
+  description="Explora artículos y perspectivas profundas sobre transformación organizacional a través del coaching ontológico."
+>
+
+  <section class="blog-hero">
+    <span class="section-label">Reflexiones</span>
+    <h1>Blog</h1>
+    <p>Artículos y reflexiones sobre transformación organizacional desde la perspectiva del coaching ontológico.</p>
+  </section>
+
+  <section class="blog-grid-section">
+    <div class="container">
+
+      <!-- FILTRO -->
+      <div class="blog-filters">
+        {categories.map(cat => (
+          <button class="filter-btn" data-category={cat}>{cat}</button>
+        ))}
+      </div>
+
+      <div class="blog-grid" id="blog-grid">
+        {sortedPosts.map((post) => (
+          <article class="blog-card fade-in" data-category={post.data.category ?? 'Sin categoría'}>
+            {post.data.image && (
+              <a href={`/blog/${post.slug}`} class="blog-card-image">
+                <img src={post.data.image} alt={post.data.title} loading="lazy" />
+              </a>
+            )}
+            
+            <div class="blog-card-body">
+  <span class="blog-card-date">{formatDate(post.data.pubDate)}</span>
+  <h3><a href={`/blog/${post.slug}`}>{post.data.title}</a></h3>
+  <p>{post.data.description}</p>
+  <a href={`/blog/${post.slug}`} class="read-more">
+    Leer más →
+  </a>
+</div>
+          </article>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+  const cards = document.querySelectorAll<HTMLElement>('.blog-card');
+
+  // Activa "Todas" por defecto
+  buttons[0]?.classList.add('active');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selected = btn.dataset.category;
+
+      cards.forEach(card => {
+        if (selected === 'Todas' || card.dataset.category === selected) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

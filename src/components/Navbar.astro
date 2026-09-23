@@ -1,0 +1,45 @@
+---
+const currentPath = Astro.url.pathname;
+const isBlog = currentPath.startsWith('/blog');
+---
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">
+    <img src="/images/logos/logo-CB-white.webp" alt="Consultoría Bastías" />
+  </a>
+
+  <ul class="nav-links">
+    <li><a href={isBlog ? '/#inicio' : '#inicio'}>Inicio</a></li>
+    <li><a href={isBlog ? '/#quien' : '#quien'}>Quién Soy</a></li>
+    <li><a href={isBlog ? '/#comotrabajo' : '#comotrabajo'}>Cómo trabajo</a></li>
+    <li><a href={isBlog ? '/#conquien' : '#conquien'}>Con quiénes trabajo</a></li>
+    <li><a href={isBlog ? '/#formas' : '#formas'}>Formas de acompañamiento</a></li>
+    <li><a href="/blog" class="blog-link">Blog</a></li>
+  </ul>
+
+  <div class="nav-cta">
+    
+  </div>
+
+  <button class="hamburger" aria-label="Menú" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu">
+  <a href={isBlog ? '/' : '#inicio'}>Inicio</a>
+  <a href={isBlog ? '/#quien' : '#quien'}>Quién Soy</a>
+  <a href={isBlog ? '/#comotrabajo' : '#comotrabajo'}>Cómo trabajo</a>
+  <a href={isBlog ? '/#conquien' : '#conquien'}>Con quiénes trabajo</a>
+  <a href={isBlog ? '/#formas' : '#formas'}>Formas de acompañamiento</a>
+  <a href="/blog">Blog</a>
+  <a
+    href="https://wa.me/+529983178430?text=Hola%21%20Vi%20tu%20p%C3%A1gina%20web%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%2F"
+    target="_blank"
+    rel="noopener noreferrer"
+    style="color: #25D366;"
+  >WhatsApp →</a>
+</div>
