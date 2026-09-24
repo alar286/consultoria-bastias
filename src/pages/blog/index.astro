@@ -7,12 +7,20 @@ const sortedPosts = posts.sort((a, b) => new Date(b.data.pubDate).getTime() - ne
 
 const categories = ['Todas', 'Comunicación', 'Liderazgo', 'Procesos'];
 
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
 function formatDate(date: Date) {
   return new Intl.DateTimeFormat('es-MX', {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
   }).format(new Date(date));
+}
+
+function getPath(path: string) {
+  return `${base}${path.replace(/^\/+/, '')}`;
 }
 ---
 
@@ -41,19 +49,30 @@ function formatDate(date: Date) {
         {sortedPosts.map((post) => (
           <article class="blog-card fade-in" data-category={post.data.category ?? 'Sin categoría'}>
             {post.data.image && (
-              <a href={`/blog/${post.slug}`} class="blog-card-image">
-                <img src={post.data.image} alt={post.data.title} loading="lazy" />
+              <a href={getPath(`blog/${post.slug}`)} class="blog-card-image">
+                <img
+                  src={getPath(post.data.image)}
+                  alt={post.data.title}
+                  loading="lazy"
+                />
               </a>
             )}
             
             <div class="blog-card-body">
-  <span class="blog-card-date">{formatDate(post.data.pubDate)}</span>
-  <h3><a href={`/blog/${post.slug}`}>{post.data.title}</a></h3>
-  <p>{post.data.description}</p>
-  <a href={`/blog/${post.slug}`} class="read-more">
-    Leer más →
-  </a>
-</div>
+              <span class="blog-card-date">{formatDate(post.data.pubDate)}</span>
+
+              <h3>
+                <a href={getPath(`blog/${post.slug}`)}>
+                  {post.data.title}
+                </a>
+              </h3>
+
+              <p>{post.data.description}</p>
+
+              <a href={getPath(`blog/${post.slug}`)} class="read-more">
+                Leer más →
+              </a>
+            </div>
           </article>
         ))}
       </div>
