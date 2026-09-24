@@ -2,7 +2,7 @@
 title: "El costo invisible de la rotación constante en equipo"
 description: "Costo invisible de la rotación constante en equipos afecta resultados y cultura. Descubre cómo abordarlo desde el liderazgo consciente."
 pubDate: 2026-03-03
-image: "/images/blog/costo-invisible-de-la-rotación-constante-en-equipos.webp"
+image: "/images/blog/costo-invisible-de-la-rotacion-constante-en-equipos.webp"
 tags: ["comunicación", "liderazgo", "equipos"]
 category: "Liderazgo"
 ---
