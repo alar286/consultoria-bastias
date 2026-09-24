@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout>
@@ -8,260 +10,436 @@ import Layout from '../layouts/Layout.astro';
   <section class="hero" id="inicio">
     <div class="hero-bg"></div>
     <div class="hero-grain"></div>
+
     <div class="hero-content container">
       <div class="hero-eyebrow">Coach Ontológico Organizacional</div>
-      <h1><strong>Cuando el liderazgo<br />se vuelve pesado</strong></h1>
+
+      <h1>
+        <strong>Cuando el liderazgo<br />se vuelve pesado</strong>
+      </h1>
+
       <p class="hero-subtitle">
         Las conversaciones se rompen y los equipos se tensan… El problema no es la capacidad: es la forma en que se está conversando y decidiendo.
       </p>
-      
+
       <div class="hero-actions">
-        
         <a href="#quien" class="btn">Conocer más</a>
       </div>
     </div>
+
     <div class="hero-scroll">
       <span>Scroll</span>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
         <path d="M12 5v14M5 12l7 7 7-7"/>
       </svg>
     </div>
   </section>
-<!-- ===== FRANJA TEXTO ===== -->
-<section style="background: #061c2e; padding: 4rem 2rem; text-align: center;">
-  <div style="max-width: 80%; margin: 0 auto;">
-    <p style="font-size: clamp(1rem, 1.8vw, 1.2rem); line-height: 1.8; color: #fff; margin-bottom: 1.2rem; text-transform: uppercase;">
-      Acompaño a líderes y organizaciones a revisar cómo están operando, para recuperar claridad, coherencia y dirección, sin forzar personas ni sostener estructuras que ya no funcionan.
-    </p>
-    <p style="font-size: clamp(1rem, 1.8vw, 1.2rem); line-height: 1.8; color: #fff; margin: 0; text-transform: uppercase;">
-      Trabajo desde la experiencia, la escucha profunda y la intervención precisa en el momento justo.
-    </p>
-  </div>
-</section>
+
+  <!-- ===== FRANJA TEXTO ===== -->
+  <section style="background: #061c2e; padding: 4rem 2rem; text-align: center;">
+    <div style="max-width: 80%; margin: 0 auto;">
+      <p
+        style="font-size: clamp(1rem, 1.8vw, 1.2rem); line-height: 1.8; color: #fff; margin-bottom: 1.2rem; text-transform: uppercase;"
+      >
+        Acompaño a líderes y organizaciones a revisar cómo están operando, para recuperar claridad, coherencia y dirección, sin forzar personas ni sostener estructuras que ya no funcionan.
+      </p>
+
+      <p
+        style="font-size: clamp(1rem, 1.8vw, 1.2rem); line-height: 1.8; color: #fff; margin: 0; text-transform: uppercase;"
+      >
+        Trabajo desde la experiencia, la escucha profunda y la intervención precisa en el momento justo.
+      </p>
+    </div>
+  </section>
 
   <!-- ===== QUIÉN SOY ===== -->
   <section class="quien-soy" id="quien">
     <div class="container">
       <div class="quien-grid">
+
         <div class="quien-text">
           <span class="section-label">Perfil</span>
+
           <h2 class="section-heading">Quién Soy</h2>
-          <p>Soy <strong>Alejandra Bastías</strong>, coach ontológico organizacional. Mi recorrido profesional se desarrolló dentro de organizaciones reales y contextos de alta exigencia, trabajando con líderes, equipos y estructuras donde los resultados, las personas y las decisiones conviven bajo presión constante.</p>
-          <p>Mi formación se apoya en el coaching ontológico, la inteligencia emocional y la comunicación asertiva, disciplinas que aplico como prácticas vivas en situaciones concretas de liderazgo, gestión y trabajo en equipo.</p>
-          <p>No trabajo desde el lugar de "ayudar" ni de indicar qué hacer. Acompaño procesos de reflexión, orden y toma de decisiones, interviniendo allí donde las conversaciones se traban, los vínculos se tensan o el liderazgo se vuelve pesado.</p>
+
+          <p>
+            Soy <strong>Alejandra Bastías</strong>, coach ontológico organizacional. Mi recorrido profesional se desarrolló dentro de organizaciones reales y contextos de alta exigencia, trabajando con líderes, equipos y estructuras donde los resultados, las personas y las decisiones conviven bajo presión constante.
+          </p>
+
+          <p>
+            Mi formación se apoya en el coaching ontológico, la inteligencia emocional y la comunicación asertiva, disciplinas que aplico como prácticas vivas en situaciones concretas de liderazgo, gestión y trabajo en equipo.
+          </p>
+
+          <p>
+            No trabajo desde el lugar de "ayudar" ni de indicar qué hacer. Acompaño procesos de reflexión, orden y toma de decisiones, interviniendo allí donde las conversaciones se traban, los vínculos se tensan o el liderazgo se vuelve pesado.
+          </p>
         </div>
 
         <div class="quien-visual fade-in">
-          <!-- Reemplaza este src con tu imagen real -->
           <img
-            src="../../../images/inicio/coach-Bastias.webp"
+            src={`${base}images/inicio/coach-Bastias.webp`}
             alt="Alejandra Bastías - Coach Ontológico"
             class="quien-portrait"
           />
+
           <div class="quien-frame"></div>
         </div>
-      </div>
-      <!-- Texto completo debajo, a todo el ancho -->
-    <div style="margin-top: 3rem;">
-      <p>A lo largo de más de dos décadas de experiencia en ámbitos comerciales, organizacionales y de gestión, he trabajado con personas y equipos de diferentes culturas, lo que me permite comprender el trasfondo cultural que influye en la forma de comunicarse, decidir y liderar.</p>
-      <p>Esta mirada me permite integrar diversidad de contextos, estilos y formas de interpretar la realidad, adaptando cada acompañamiento a la identidad particular de la organización y de las personas que la conforman.</p>
-      <p>Trabajo desde una mirada sistémica, observando a las organizaciones como redes de conversaciones vivas. Mi acompañamiento se sostiene en la escucha profunda, el criterio profesional y la intervención consciente, creando condiciones para decisiones más claras, vínculos más sanos y acciones sostenibles en el tiempo.</p>
-      <a href="archivos/CV-CAB.pdf" class="btn" target="_blank" rel="noopener noreferrer">Descargar Curriculum Vitae</a>
-    </div>
-  </div>
-</section>
-    </div>
-    
-    
-  </section>
 
+      </div>
+
+      <!-- Texto completo debajo, a todo el ancho -->
+      <div style="margin-top: 3rem;">
+        <p>
+          A lo largo de más de dos décadas de experiencia en ámbitos comerciales, organizacionales y de gestión, he trabajado con personas y equipos de diferentes culturas, lo que me permite comprender el trasfondo cultural que influye en la forma de comunicarse, decidir y liderar.
+        </p>
+
+        <p>
+          Esta mirada me permite integrar diversidad de contextos, estilos y formas de interpretar la realidad, adaptando cada acompañamiento a la identidad particular de la organización y de las personas que la conforman.
+        </p>
+
+        <p>
+          Trabajo desde una mirada sistémica, observando a las organizaciones como redes de conversaciones vivas. Mi acompañamiento se sostiene en la escucha profunda, el criterio profesional y la intervención consciente, creando condiciones para decisiones más claras, vínculos más sanos y acciones sostenibles en el tiempo.
+        </p>
+
+        <a
+          href={`${base}archivos/CV-CAB.pdf`}
+          class="btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Descargar Curriculum Vitae
+        </a>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ===== CÓMO TRABAJO ===== -->
   <section class="como-trabajo" id="comotrabajo">
     <div class="container">
       <span class="section-label">Metodología</span>
+
       <h2 class="section-heading light">Cómo Trabajo</h2>
+
       <p class="como-intro fade-in">
         Trabajo a partir de la observación de las conversaciones, los vínculos y las decisiones que sostienen o bloquean el funcionamiento de una organización.
       </p>
+
       <div class="pilares-grid">
+
         <div class="pilar fade-in fade-in-delay-1">
           <div class="pilar-number">01</div>
           <h3>Escucha profunda</h3>
           <p>Escuchar lo que se dice y también lo que no se dice.</p>
           <div class="pilar-accent"></div>
         </div>
+
         <div class="pilar fade-in fade-in-delay-2">
           <div class="pilar-number">02</div>
           <h3>Visión sistémica</h3>
           <p>Observar dinámicas y patrones, no personas aisladas.</p>
           <div class="pilar-accent"></div>
         </div>
+
         <div class="pilar fade-in fade-in-delay-3">
           <div class="pilar-number">03</div>
           <h3>Intervención precisa</h3>
           <p>Intervenir con precisión, sin sobrecargar procesos ni equipos.</p>
           <div class="pilar-accent"></div>
         </div>
+
         <div class="pilar fade-in fade-in-delay-4">
           <div class="pilar-number">04</div>
           <h3>Reflexión consciente</h3>
           <p>Diseñar espacios de reflexión que habiliten acción consciente.</p>
           <div class="pilar-accent"></div>
         </div>
+
       </div>
-      <p style="margin-top: 3rem; color: var(--color-text-gray); max-width: 650px; font-size: 0.97rem; line-height: 1.85;">
+
+      <p
+        style="margin-top: 3rem; color: var(--color-text-gray); max-width: 650px; font-size: 0.97rem; line-height: 1.85;"
+      >
         Cada acompañamiento es diseñado a medida, respetando la cultura, el momento y las personas involucradas. El foco está puesto en generar claridad, coherencia y acción sostenible en el tiempo.
       </p>
     </div>
   </section>
 
-
   <!-- ===== CON QUIÉNES TRABAJO ===== -->
   <section class="con-quien" id="conquien">
     <div class="container">
+
       <div class="con-quien-grid">
+
         <div>
           <span class="section-label">Clientes</span>
+
           <h2 class="section-heading">Con quiénes trabajo</h2>
+
           <div class="profiles-list">
+
             <div class="profile-item fade-in">
               <div class="profile-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
                   <path d="M20 7H4a2 2 0 00-2 2v6a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2zM16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/>
                 </svg>
               </div>
+
               <div class="profile-text">
                 <h3>Líderes con experiencia</h3>
                 <p>Directivos que buscan claridad en momentos de presión o transformación.</p>
               </div>
             </div>
+
             <div class="profile-item fade-in fade-in-delay-1">
               <div class="profile-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+                  <polyline points="9 22 9 12 15 12 15 22"/>
                 </svg>
               </div>
+
               <div class="profile-text">
                 <h3>Dueños y directivos</h3>
                 <p>Organizaciones en crecimiento que necesitan ordenamiento interno.</p>
               </div>
             </div>
+
             <div class="profile-item fade-in fade-in-delay-2">
               <div class="profile-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                  <circle cx="9" cy="7" r="4"/>
+                  <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
                 </svg>
               </div>
+
               <div class="profile-text">
                 <h3>Mandos medios sobrecargados</h3>
                 <p>Personas entre la dirección y el equipo que necesitan reorientarse.</p>
               </div>
             </div>
+
             <div class="profile-item fade-in fade-in-delay-3">
               <div class="profile-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="12" r="10"/>
+                  <path d="M12 8v4l3 3"/>
                 </svg>
               </div>
+
               <div class="profile-text">
                 <h3>Equipos que necesitan reordenarse</h3>
                 <p>Grupos que buscan volver a funcionar con claridad y coherencia.</p>
               </div>
             </div>
+
           </div>
         </div>
+
         <div class="con-quien-context fade-in">
           <h3>Organizaciones en movimiento</h3>
-          <p>Trabajo con organizaciones que están creciendo, atravesando cambios o transitando momentos de estancamiento y tensión interna.</p>
+
+          <p>
+            Trabajo con organizaciones que están creciendo, atravesando cambios o transitando momentos de estancamiento y tensión interna.
+          </p>
+
           <br />
-          <p>No se trata de arreglar personas. Se trata de revisar cómo están operando los vínculos, las conversaciones y las decisiones que sostienen o bloquean el funcionamiento de la organización.</p>
+
+          <p>
+            No se trata de arreglar personas. Se trata de revisar cómo están operando los vínculos, las conversaciones y las decisiones que sostienen o bloquean el funcionamiento de la organización.
+          </p>
+
           <br />
-          <a class="hero-actions"
+
+          <a
             href="https://wa.me/+529983178430?text=Hola%21%20Vi%20tu%20p%C3%A1gina%20web%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%2F"
             class="btn"
             target="_blank"
             rel="noopener noreferrer"
             style="margin-top: 1rem;"
-          >Conversemos</a>
+          >
+            Conversemos
+          </a>
         </div>
+
       </div>
     </div>
   </section>
-
 
   <!-- ===== FORMAS DE ACOMPAÑAMIENTO ===== -->
   <section class="formas" id="formas">
     <div class="container">
       <span class="section-label">Servicios</span>
+
       <h2 class="section-heading light">Formas de acompañamiento</h2>
+
       <div class="formas-grid">
+
         <div class="forma-card fade-in">
           <h3><span>01</span>Acompañamiento a líderes y directivos</h3>
-          <p>Proceso personalizado para líderes que necesitan ordenar su mirada, recuperar claridad y tomar decisiones con mayor conciencia y criterio.</p>
+          <p>
+            Proceso personalizado para líderes que necesitan ordenar su mirada, recuperar claridad y tomar decisiones con mayor conciencia y criterio.
+          </p>
         </div>
+
         <div class="forma-card fade-in fade-in-delay-1">
           <h3><span>02</span>Intervención en equipos de trabajo</h3>
-          <p>Espacios de trabajo conjunto para revisar dinámicas, mejorar la comunicación y recuperar el funcionamiento colectivo cuando los vínculos se han deteriorado.</p>
+          <p>
+            Espacios de trabajo conjunto para revisar dinámicas, mejorar la comunicación y recuperar el funcionamiento colectivo cuando los vínculos se han deteriorado.
+          </p>
         </div>
+
         <div class="forma-card fade-in fade-in-delay-2">
           <h3><span>03</span>Procesos de ordenamiento organizacional</h3>
-          <p>Acompañamiento sistémico para organizaciones que necesitan revisar su estructura, sus roles y sus procesos de decisión en momentos de cambio o crecimiento.</p>
+          <p>
+            Acompañamiento sistémico para organizaciones que necesitan revisar su estructura, sus roles y sus procesos de decisión en momentos de cambio o crecimiento.
+          </p>
         </div>
+
         <div class="forma-card fade-in fade-in-delay-3">
           <h3><span>04</span>Supervisión y reflexión estratégica</h3>
-          <p>Espacios de supervisión para líderes y consultores que necesitan un lugar de reflexión sobre su práctica, sus decisiones y su impacto organizacional.</p>
+          <p>
+            Espacios de supervisión para líderes y consultores que necesitan un lugar de reflexión sobre su práctica, sus decisiones y su impacto organizacional.
+          </p>
         </div>
+
       </div>
+
       <p class="formas-note">
         Cada proceso se define de manera personalizada, según la necesidad real de la organización o del líder.
       </p>
     </div>
   </section>
 
-
   <!-- ===== GALERÍA ===== -->
   <section class="galeria">
     <div class="container">
       <span class="section-label">En acción</span>
-      <h2 class="section-heading" style="margin-bottom: 2.5rem;">Trabajo en contexto real</h2>
+
+      <h2 class="section-heading" style="margin-bottom: 2.5rem;">
+        Trabajo en contexto real
+      </h2>
+
       <div class="galeria-grid">
-        <!-- Reemplaza estos src con tus imágenes reales -->
+
         <div class="galeria-item">
-          <img src="/images/galeria/concurso.webp" alt="Consultoría Bastías - sesión de trabajo" loading="lazy" />
+          <img
+            src={`${base}images/galeria/concurso.webp`}
+            alt="Consultoría Bastías - sesión de trabajo"
+            loading="lazy"
+          />
         </div>
+
         <div class="galeria-item">
-          <img src="/images/galeria/consultoria.webp" alt="Consultoría Bastías - sesión de trabajo" loading="lazy" />
+          <img
+            src={`${base}images/galeria/consultoria.webp`}
+            alt="Consultoría Bastías - sesión de trabajo"
+            loading="lazy"
+          />
         </div>
+
         <div class="galeria-item">
-         <img src="/images/galeria/formas.webp" alt="Consultoría Bastías - sesión de trabajo" loading="lazy" />
+          <img
+            src={`${base}images/galeria/formas.webp`}
+            alt="Consultoría Bastías - sesión de trabajo"
+            loading="lazy"
+          />
         </div>
+
         <div class="galeria-item">
-          <img src="/images/galeria/juntos.webp" alt="Consultoría Bastías - sesión de trabajo" loading="lazy" />
+          <img
+            src={`${base}images/galeria/juntos.webp`}
+            alt="Consultoría Bastías - sesión de trabajo"
+            loading="lazy"
+          />
         </div>
+
         <div class="galeria-item">
-          <img src="/images/galeria/mentoria.webp" alt="Consultoría Bastías - sesión de trabajo" loading="lazy" />
+          <img
+            src={`${base}images/galeria/mentoria.webp`}
+            alt="Consultoría Bastías - sesión de trabajo"
+            loading="lazy"
+          />
         </div>
+
         <div class="galeria-item">
-          <img src="/images/galeria/psicologia-de-ventas.webp" alt="Consultoría Bastías - sesión de trabajo" loading="lazy" />
+          <img
+            src={`${base}images/galeria/psicologia-de-ventas.webp`}
+            alt="Consultoría Bastías - sesión de trabajo"
+            loading="lazy"
+          />
         </div>
+
         <div class="galeria-item">
-          <img src="/images/galeria/concurso.webp" alt="Consultoría Bastías - sesión de trabajo" loading="lazy" />
+          <img
+            src={`${base}images/galeria/concurso.webp`}
+            alt="Consultoría Bastías - sesión de trabajo"
+            loading="lazy"
+          />
         </div>
+
         <div class="galeria-item">
-          <img src="/images/galeria/concurso.webp" alt="Consultoría Bastías - sesión de trabajo" loading="lazy" />
+          <img
+            src={`${base}images/galeria/concurso.webp`}
+            alt="Consultoría Bastías - sesión de trabajo"
+            loading="lazy"
+          />
         </div>
+
       </div>
     </div>
   </section>
-
 
   <!-- ===== CTA SECTION ===== -->
   <section class="cta-section">
     <div class="cta-content">
       <span class="section-label">Contacto</span>
+
       <h2>¿Es el momento de revisar cómo están operando?</h2>
-      <p>Si algo de lo que leíste resonó contigo, podemos conversar. Sin compromiso, sin fórmulas.</p>
+
+      <p>
+        Si algo de lo que leíste resonó contigo, podemos conversar. Sin compromiso, sin fórmulas.
+      </p>
+
       <div class="cta-actions">
         <a
           href="https://wa.me/+529983178430?text=Hola%21%20Vi%20tu%20p%C3%A1gina%20web%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n%2F"
@@ -271,7 +449,10 @@ import Layout from '../layouts/Layout.astro';
         >
           Escribir por WhatsApp
         </a>
-        <a href="mailto:coachacbastias@gmail.com" class="btn">Enviar un email</a>
+
+        <a href="mailto:coachacbastias@gmail.com" class="btn">
+          Enviar un email
+        </a>
       </div>
     </div>
   </section>
