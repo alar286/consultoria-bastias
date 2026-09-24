@@ -2,7 +2,7 @@
 title: "El costo invisible de sostener siempre"
 description: "El liderazgo cuello de botella no nace de la falta de capacidad ni de compromiso. Al contrario, suele aparecer en líderes responsables y experimentados."
 pubDate: 2026-01-13
-image: "/images/blog/El costo invisible de sostener siempre.webp"
+image: "/images/blog/el-costo-invisible-de-sostener-siempre.webp"
 tags: ["liderazgo", "bienestar", "consciencia"]
 category: "Liderazgo"
 ---
