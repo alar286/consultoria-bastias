@@ -5,5 +5,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [mdx(), sitemap()],
   site: 'https://alar286.github.io',
-  base: '/consultoria-bastias',
+  base: '/consultoria-bastias/',
 });
