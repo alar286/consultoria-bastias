@@ -14,7 +14,7 @@ interface Props {
 const {
   title = 'Coach ontológico organizacional | Claridad en tu Liderazgo',
   description = 'Transforma tu liderazgo con claridad. Ayudo a organizaciones a soltar lo obsoleto y recuperar dirección mediante escucha profunda y cambios precisos.',
-  ogImage = '/images/og-image.jpg',
+  ogImage,
   customStyle,
 } = Astro.props;
 ---
@@ -31,14 +31,14 @@ const {
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_MX" />
-  <meta property="og:image" content={ogImage} />
+  {ogImage && <meta property="og:image" content={ogImage} />}
   <meta property="og:site_name" content="Consultoría Bastías" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={description} />
 
-  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  
   <link rel="canonical" href={Astro.url} />
 
   <title>{title}</title>
