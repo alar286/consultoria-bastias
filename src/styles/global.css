@@ -381,7 +381,7 @@ section {
   position: absolute;
   inset: 0;
   background-color: #11416A;
-  background-image: url('/images/inicio/portada.webp');
+  background-image: url('/consultoria-bastias/images/inicio/portada.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1019,7 +1019,7 @@ section {
 
 .blog-hero {
   padding: 7rem 2rem 2rem;
-  background-image: url('/images/blog-header.webp');
+  background-image: url('/consultoria-bastias/images/blog-header.webp');
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
