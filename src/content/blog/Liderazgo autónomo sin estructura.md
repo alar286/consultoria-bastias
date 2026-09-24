@@ -2,7 +2,7 @@
 title: "Liderazgo autónomo sin estructura: el riesgo invisible del que siempre se automotiva"
 description: "Liderazgo autónomo sin estructura puede agotar tu energía y frenar tu crecimiento. Descubre cómo sostener resultados sin depender solo de tu motivación."
 pubDate: 2026-02-24
-image: "/images/blog/Liderazgo-autónomo-sin-estructura.webp"
+image: "/images/blog/liderazgo-autonomosin-estructura.webp"
 tags: ["liderazgo", "bienestar", "consciencia"]
 category: "Liderazgo"
 ---
