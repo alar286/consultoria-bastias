@@ -2,7 +2,7 @@
 title: "Síndrome del impostor en líderes: cómo transformar tu conversación interna"
 description: "Síndrome del impostor en liderazgo limita tu impacto y confianza. Descubre cómo transformar tu conversación interna y liderar con mayor claridad."
 pubDate: 2026-03-03
-image: "/images/blog/Síndrome-del-impostor.webp"
+image: "/images/blog/sindrome-del-impostor.webp"
 tags: ["comunicación", "liderazgo", "equipos"]
 category: "Comunicación"
 ---
