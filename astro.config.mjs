@@ -1,9 +1,10 @@
+
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   integrations: [mdx(), sitemap()],
-  site: 'https://alar286.github.io',
-  base: '/consultoria-bastias/',
+  site: 'https://alejandrabastias.com',
+  base: '/',
 });
